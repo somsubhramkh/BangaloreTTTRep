@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html ng-app="angularTable">
 <head>
 
 <spring:url value="/resources/bootstrap.min.css" var="bootstrapmincss"></spring:url>
@@ -11,6 +11,7 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <link href="${bootstrapmincss}" rel="stylesheet"/>
 <script src="${bootstrapminjs}"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->   
@@ -60,9 +61,9 @@ data-target="#example-navbar-collapse">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
 <ul class="dropdown-menu">
 
-<li><a href="Products">Guitar</a></li>
-<li><a href="Products">Piano</a></li>
-<li><a href="Products">Accessories</a></li>
+<li><a href="Product">Guitar</a></li>
+<li><a href="Product">Piano</a></li>
+<li><a href="Product">Accessories</a></li>
 
 </ul>
 </li>
@@ -87,4 +88,3 @@ data-target="#example-navbar-collapse">
 <br/>
 <br/>
 <br/>
-<input type="text" value="SA" id="myInput"/>
