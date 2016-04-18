@@ -28,5 +28,11 @@ public class LoginController {
 		return model;
 	}
 	
+	@RequestMapping("/Products")
+	public ModelAndView productsPage(){
+		ModelAndView model=new ModelAndView("Products");
+		return model;
+	}
+	
 	
 }
