@@ -4,7 +4,28 @@
 
 <%@include file="/Header.jsp" %>
 
-                    <div class="bs-component" ng-controller="listdata">
+<%String type=(String)request.getAttribute("prodData"); %>
+
+
+
+
+<script>
+var prod = ${prodData};
+
+angular.module('repeatSample', [])
+    .controller('repeatController', function($scope){
+    	$scope.products=prod;
+    
+        $scope.sort = function(keyname){
+            $scope.sortKey = keyname;   //set the sortKey to the param passed
+            $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+        }
+    	
+    });
+
+</script>
+
+                    <div class="bs-component" ng-controller="repeatController">
 
     <form class="form-inline">
         <div class="form-group">
@@ -13,7 +34,7 @@
         </div>
     </form>
                      
-                     <table class="table table-striped table-hover">
+                     <!-- <table class="table table-striped table-hover">
                             <thead>
                                 <tr>
             <th ng-click="sort('type')">Instrument Type
@@ -38,7 +59,36 @@
                                     <td>{{user.price}}</td>
                                 </tr>
                             </tbody>
-                        </table>  
+                        </table> -->
+                        
+             <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+            <th ng-click="sort('ID')">ID
+                <span class="glyphicon sort-icon" ng-show="sortKey=='id'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+            </th>
+            <th ng-click="sort('name')">Product Name
+                <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+            </th>
+            <th ng-click="sort('price')">Price
+                <span class="glyphicon sort-icon" ng-show="sortKey=='price'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+            </th>
+            <th ng-click="sort('desc')">Description
+                <span class="glyphicon sort-icon" ng-show="sortKey=='desc'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+            </th>
+        </tr>
+                            </thead>
+                            <tbody>
+                            
+                                <tr ng-repeat="product in products|orderBy:sortKey:reverse|filter:search">
+                                    <td>{{product.ID}}</td>
+                                    <td>{{product.name}}</td>
+                                    <td>{{product.price}}</td>
+                                    <td>{{product.desc}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                          
                     </div>
                 </div>
       </div>
