@@ -56,6 +56,12 @@ public class LoginController {
 		return model;
 	}
 	
+	@RequestMapping("/ProductDetails")
+	public ModelAndView productDetailsPage(){
+		ModelAndView model=new ModelAndView("ProductDetails");
+		return model;
+	}
+	
 	@RequestMapping("/")
 	public ModelAndView landingPage(){
 		ModelAndView model=new ModelAndView("index");

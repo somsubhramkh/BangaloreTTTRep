@@ -2,10 +2,14 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<%@include file="/Header.jsp" %>
+
+<!-- Header file included which contains the menu -->
+<!-- ========================================================================================================== -->
+<%@include file="/WEB-INF/views/templates/Header.jsp" %>
 
 
 <div class="row">
+<div class="container">
 <img src="${images}/Logo.JPG" width="300px">
 <h4>ABOUT US</h4>
 MusicHub is India's largest direct online retailer for musical instruments and pro audio equipment.  We also offer a wide range of services to the music entertainment industry.
@@ -18,4 +22,8 @@ Our Entertainment division conceptualised and executed India’s first full-scal
 
 In January 2015, Austin Bazaar founder Suman Singh took over as CEO of MusicHub, bringing in his valuable experience in scaling up fast growing companies. Under his watch, MusicHub has grown over 350% in 2015-16. We look forward to continuing our accelerated growth and fulfilling our vision for the company.
 </div>
-<%@include file="/Footer.jsp" %>
+</div>
+
+<!-- Footer JSP file included -->
+<!-- ===================================================================================================================== -->
+<%@include file="/WEB-INF/views/templates/Footer.jsp" %>

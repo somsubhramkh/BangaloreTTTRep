@@ -2,7 +2,9 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<%@include file="/Header.jsp" %>
+<!-- Header file included which contains the menu -->
+<!-- ========================================================================================================== -->
+<%@include file="/WEB-INF/views/templates/Header.jsp" %>
 
 <div class="section">
       <div class="container">
@@ -13,9 +15,14 @@
           </div>
           <div class="col-md-6">
             <ul>
-              <li>Description:</li>
-              <li>Brand:</li>
-              <li>Price:</li>
+
+<!-- Showing values taken from the request parameters -->
+<!-- ============================================================================================== -->
+
+              <li>Name:<%=request.getParameter("name")%></li>
+              <li>Description:<%=request.getParameter("desc")%></li>
+              <li>Brand:<%=request.getParameter("brand")%></li>
+              <li>Price:<%=request.getParameter("price")%></li>
             </ul>
             <a class="btn btn-primary">Add to Cart</a>
           </div>
@@ -23,4 +30,6 @@
       </div>
     </div>
 
-<%@include file="/Footer.jsp" %>
+<!-- Footer JSP file included -->
+<!-- ===================================================================================================================== -->
+<%@include file="/WEB-INF/views/templates/Footer.jsp" %>

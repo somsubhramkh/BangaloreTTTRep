@@ -10,7 +10,8 @@
   <url>http://maven.apache.org</url>
   
   
-  
+  <!-- dependency for junit -->
+  <!-- =============================== -->
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -18,7 +19,9 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
+
+  <!-- dependency for spring -->
+  <!-- =============================== -->    
     <dependency>
 	<groupId>org.springframework</groupId>
 	<artifactId>spring-core</artifactId>
@@ -37,6 +40,8 @@
 	<version>4.2.5.RELEASE</version>
 </dependency>
 
+  <!-- dependency for gson for JSON conversion -->
+  <!-- =============================== -->
  <dependency>
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>
@@ -44,6 +49,9 @@
         <scope>compile</scope>
     </dependency>
 
+
+  <!-- dependency for jstl -->
+  <!-- =============================== -->
  <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>jstl</artifactId>
