@@ -1,7 +1,10 @@
 package musichub16042016.model;
 
-public class Product {
+import javax.persistence.*;;
 
+@Entity
+public class Product {
+	@Id
 	private int ID;
 	private String name;
 	private double price;
@@ -77,6 +80,13 @@ public class Product {
 		this.brand = brand;
 		this.type=type;
 	}
+
+
+	public Product() {
+		
+	}
+	
+
 	
 	
 }
