@@ -86,7 +86,10 @@ public class Product {
 		
 	}
 	
-
+/*	@Override
+    public String toString(){
+        return "id="+ID+", name="+name+", country="+country;
+    }	*/
 	
 	
 }
