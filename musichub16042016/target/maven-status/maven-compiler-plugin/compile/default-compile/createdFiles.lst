@@ -1,4 +1,6 @@
+musichub16042016\dao\ProductDAO.class
+musichub16042016\service\ProductServiceImpl.class
 musichub16042016\model\Product.class
 musichub16042016\controller\LoginController.class
-musichub16042016\ProductDAOImpl.class
-musichub16042016\ProductDAO.class
+musichub16042016\dao\ProductDAOImpl.class
+musichub16042016\service\ProductService.class

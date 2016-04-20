@@ -30,13 +30,13 @@ public class ProductServiceImpl implements ProductService {
 	
 	@Transactional
 	public void addProduct(Product p) {
-		this.productDAO.addProduct(p);
+		productDAO.addProduct(p);
 	}
 
 	
 	@Transactional
 	public void updateProduct(Product p) {
-		this.productDAO.updateProduct(p);
+		productDAO.updateProduct(p);
 	}
 
 	
@@ -48,7 +48,7 @@ public class ProductServiceImpl implements ProductService {
 	
 	@Transactional
 	public Product getProductById(int id) {
-		return this.productDAO.getProductById(id);
+		return productDAO.getProductById(id);
 	}
 
 	

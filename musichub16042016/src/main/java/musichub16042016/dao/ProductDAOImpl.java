@@ -61,6 +61,7 @@ public class ProductDAOImpl implements ProductDAO{
 	public void addProduct(Product p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(p);
+		logger.info("Product saved successfully, Product Details="+p);
 		
 	}
 
@@ -68,7 +69,7 @@ public class ProductDAOImpl implements ProductDAO{
 	public void updateProduct(Product p) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.update(p);
-		
+		logger.info("Product updated successfully, Product Details="+p);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -78,7 +79,7 @@ public class ProductDAOImpl implements ProductDAO{
 		
 		List<Product> productList = session.createQuery("from Product").list();
 		for(Product p : productList){
-            logger.info("Person List::"+p);
+            logger.info("Product List::"+p);
         }
 	
 		return productList;
@@ -88,6 +89,7 @@ public class ProductDAOImpl implements ProductDAO{
 	public Product getProductById(int id) {
 		Session session = this.sessionFactory.getCurrentSession();		
 		Product p = (Product) session.load(Product.class, new Integer(id));
+		logger.info("Product loaded successfully, Product details="+p);
 		return p;
 	}
 
@@ -98,6 +100,7 @@ public class ProductDAOImpl implements ProductDAO{
 		if(null != p){
 			session.delete(p);
 		}
+		logger.info("Product deleted successfully, Product details="+p);
 		
 	}
 	

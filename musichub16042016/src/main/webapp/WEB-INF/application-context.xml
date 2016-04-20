@@ -9,6 +9,52 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
  
  
+<!--  <beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+<beans:property name="driverClassName" value="org.h2.Driver" />
+<beans:property name="url" value="jdbc:h2:tcp://localhost/~/test" />
+<beans:property name="username" value="sa" />
+<beans:property name="password" value="" />
+</beans:bean>
+
+
+
+<beans:bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+<beans:property name="dataSource" ref="dataSource" />
+
+<beans:property name="hibernateProperties">
+<beans:props>
+<beans:prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect
+</beans:prop>
+<beans:prop key="hibernate.show_sql">true</beans:prop>
+<beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
+</beans:props>
+</beans:property>
+
+<beans:property name="packagesToScan">
+<beans:array>
+<beans:value>musichub16042016.model</beans:value>
+</beans:array>
+</beans:property>
+</beans:bean>		
+		
+		
+<beans:bean id="productDAO" class="musichub16042016.dao.ProductDAOImpl">
+		<beans:property name="sessionFactory" ref="sessionFactory" />
+	</beans:bean>
+	
+<beans:bean id="productService" class="musichub16042016.service.ProductServiceImpl">
+		<beans:property name="productDAO" ref="productDAO"></property>
+	</beans:bean>
+	
+	
+<context:component-scan base-package="musichub16042016" />
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+
+
+<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+<beans:property name="sessionFactory" ref="sessionFactory" />
+</beans:bean>
+ --> 
 <!-- content moved to dispatcher-servlet for experiment-->
 <!-- <beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 <beans:property name="driverClassName" value="org.h2.Driver" />

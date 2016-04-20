@@ -1,10 +1,11 @@
 package musichub16042016.model;
 
-import javax.persistence.*;;
+import javax.persistence.*;
 
 @Entity
 public class Product {
 	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int ID;
 	private String name;
 	private double price;
@@ -70,7 +71,7 @@ public class Product {
 		this.brand = brand;
 	}
 
-
+/*
 	public Product(int iD, String name, double price, String desc, String brand, String type) {
 		
 		ID = iD;
@@ -79,7 +80,7 @@ public class Product {
 		this.desc = desc;
 		this.brand = brand;
 		this.type=type;
-	}
+	}*/
 
 
 	public Product() {

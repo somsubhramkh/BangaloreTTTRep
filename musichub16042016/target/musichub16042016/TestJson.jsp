@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
     <%@page import="musichub16042016.*" %>
@@ -26,4 +26,4 @@ String json = new Gson().toJson(foo );
 <%=json %>
 
 </body>
-</html>
+</html> --%>

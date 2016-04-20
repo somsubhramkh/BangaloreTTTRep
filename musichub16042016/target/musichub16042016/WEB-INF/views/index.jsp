@@ -4,19 +4,22 @@
      <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-
-<%@include file="/Header.jsp" %>
+<!-- Header file included which contains the menu -->
+<!-- ========================================================================================================== -->
+<%@include file="/WEB-INF/views/templates/Header.jsp" %>
 
 
 
 <div class="row">
+<!-- Image carousel -->
+<!-- ============================================================================================================= -->
 <div id="myCarousel" class="carousel slide">
 <!-- Carousel indicators -->
-<ol class="carousel-indicators">
-<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-<li data-target="#myCarousel" data-slide-to="1"></li>
-<li data-target="#myCarousel" data-slide-to="2"></li>
-</ol>
+	<ol class="carousel-indicators">
+	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	<li data-target="#myCarousel" data-slide-to="1"></li>
+	<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
 <!-- Carousel items -->
 <div class="carousel-inner">
 <div class="item active">
@@ -40,12 +43,18 @@ data-slide="next">&rsaquo;</a>
 </div>
 </div>
 
+
+<!-- Product categories -->
+<!-- ==================================================================================================================== -->
 <div class="row">
 <div class="col-md-4"><a href="Product?type=guitar"><img src="${images}/acc_gtr_bndl.JPG" class="img-rounded img-responsive"></a></div>
 
 <div class="col-md-4"><a href="Product"><img src="${images}/elctc_gtr_bndl.JPG" class="img-rounded img-responsive"></a></div>
 <div class="col-md-4"><a href="Product"><img src="${images}/midi_kb.JPG" class="img-rounded img-responsive"></a></div>
 </div>
+
+<!-- Highlighted product list -->
+<!-- ===================================================================================================================== -->
 <div class="row">
 <div class="row">
 <div class="col-md-3">
@@ -79,4 +88,6 @@ data-slide="next">&rsaquo;</a>
 </div>
 </div>
 
-<%@include file="/Footer.jsp" %>
+<!-- Footer JSP file included -->
+<!-- ===================================================================================================================== -->
+<%@include file="/WEB-INF/views/templates/Footer.jsp" %>
