@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ page session="false" %>
-<html>
+<!-- <html>
 <head>
     <title>Product Admin Page</title>
     <style type="text/css">
@@ -13,7 +13,62 @@
     </style>
 </head>
 <body>
-<h1>
+
+
+ -->
+ 
+ <%@include file="/WEB-INF/views/templates/Header.jsp" %>
+ 
+ 
+<div class="row">
+          <h1>Add New Product</h1>
+          
+          <c:url var="addAction" value="/ProductAdmin/add" ></c:url>
+          
+          <div class="col-md-6">
+            <form role="form">
+            <form:form action="${addAction}" commandName="product">
+              <div class="form-group">
+                <label class="control-label">Brand</label>
+                <input class="form-control" placeholder="Enter ID"
+                type="text"><form:input path="brand" /></input>
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="exampleInputPassword1">Brand</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="Brand"
+                type="text">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="exampleInputPassword1">Description</label>
+                <input class="form-control" id="exampleInputPassword1"
+                placeholder="Description" type="text">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="exampleInputPassword1">Name</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="Name"
+                type="text">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="exampleInputPassword1">Price</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="Price"
+                type="text">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="exampleInputPassword1">Type</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="Description"
+                type="text">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+              </form:form>
+            </form>
+          </div>
+        </div>
+
+
+
+<!-- Actual Code for Add/Edit Product-->
+<!-- ================================================================================================================================================================= -->
+<%-- <h1>
     Add a Product
 </h1>
  
@@ -98,7 +153,7 @@
     </tr>
 </table>  
 </form:form>
-<br>
+<br> --%>
 <h3>Products List</h3>
 <c:if test="${!empty listProducts}">
     <table class="tg">

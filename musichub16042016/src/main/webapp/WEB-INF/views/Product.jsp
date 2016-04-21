@@ -6,6 +6,15 @@
 <!-- ========================================================================================================== -->
 <%@include file="/WEB-INF/views/templates/Header.jsp" %>
 
+
+ <div class="cover">
+      
+      <div class="cover-image">
+      <img class="center-block" src="${images}/BB_King_Jerome_Brunet.jpg" width="100%">
+      </div>
+   
+    </div>
+
 <!-- retrieving the prodData attribute sent from the controller which contains the JSON as string -->
 <!-- ============================================================================================== -->
 
